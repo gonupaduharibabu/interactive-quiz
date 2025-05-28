@@ -193,28 +193,46 @@ main {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 10% auto;
-    padding: 30px;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
     border-radius: 10px;
     width: 80%;
-    max-width: 600px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    position: relative;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 80vh;
+    overflow: auto;
+   
+}
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size:28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Add this to your CSS file */
+.results-modal {
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 90vh; /* Limit height to 90% of viewport */
+    padding: 20px;
 }
 
-.close-btn {
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    font-size: 28px;
-    font-weight: bold;
-    color: #aaa;
-    cursor: pointer;
+.results-content {
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the content */
+}
+
+.results-content ul {
+    max-height: 300px; /* Limit height of question list */
+    overflow-y: auto; /* Make question list scrollable */
+    padding-right: 10px; /* Add some padding */
 }
 
 .close-btn:hover {
